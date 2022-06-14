@@ -73,6 +73,14 @@ namespace CSharpJSON
                 return null;
             }
         }
+
+        public IEnumerator<JSONElement> GetEnumerator()
+        {           
+            foreach (JSONElement E in Children)
+            {
+                yield return E;
+            }
+        }
     }
 
     public class JSONDecoder
@@ -181,6 +189,17 @@ namespace CSharpJSON
                         {
                             Results.AddBracket(B);
                         }
+
+                        B = new JSONElement(JSONElement.BracketStyle.Value);
+                        BracketStack.Add(B);
+                        try
+                        {
+                            Results.AddBracket(B, BracketStack[BracketStack.Count - 2]);
+                        }
+                        catch
+                        {
+                            Results.AddBracket(B);
+                        }
                         continue;
                     }
                 }
@@ -265,15 +284,31 @@ namespace CSharpJSON
                         if (BracketStack[BracketStack.Count - 1].Style == JSONElement.BracketStyle.Value)
                         {
                             BracketStack.RemoveAt(BracketStack.Count - 1);
-                            JSONElement B = new JSONElement(JSONElement.BracketStyle.Property);
-                            BracketStack.Add(B);
-                            try
+                            if (BracketStack[BracketStack.Count - 1].Style == JSONElement.BracketStyle.Object)
                             {
-                                Results.AddBracket(B, BracketStack[BracketStack.Count - 2]);
+                                JSONElement B = new JSONElement(JSONElement.BracketStyle.Property);
+                                BracketStack.Add(B);
+                                try
+                                {
+                                    Results.AddBracket(B, BracketStack[BracketStack.Count - 2]);
+                                }
+                                catch
+                                {
+                                    Results.AddBracket(B);
+                                }
                             }
-                            catch
+                            else
                             {
-                                Results.AddBracket(B);
+                                JSONElement B = new JSONElement(JSONElement.BracketStyle.Value);
+                                BracketStack.Add(B);
+                                try
+                                {
+                                    Results.AddBracket(B, BracketStack[BracketStack.Count - 2]);
+                                }
+                                catch
+                                {
+                                    Results.AddBracket(B);
+                                }
                             }
                         }
                         else
@@ -349,5 +384,7 @@ namespace CSharpJSON
                 x++;
             }
         }
+
+        
     }
 }

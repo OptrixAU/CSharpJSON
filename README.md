@@ -18,12 +18,12 @@ Given the JSON below...
 	        "min": 20,
 			"max": 60
 			}
-	,
+	},
 	"species": [
 		"there",
 		"are",
 		"many"
-	]
+	]	
 }
 ```
 
@@ -33,5 +33,19 @@ You'd first parse the JSON using
 Decoded = new JSONDecoder(jsondata);
 ```
 
-Then you can get information using it as an array. For example, `Decoded["body"]["length"]["max"].Text` would get the maximum length of an adult centipede.
+Then you can get information using it as an array. 
 
+```
+Console.WriteLine( Decoded["body"]["length"]["max"].Text );
+```
+
+The Would get the maximum length of an adult centipede.
+
+```
+foreach(JSONElement E in Dec["species"])
+{
+    Console.WriteLine(E.Text.Trim());
+}
+```
+
+Would get each of the species of centipede - in this case, the values 'there', 'are' and 'many'.
