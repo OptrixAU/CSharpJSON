@@ -17,7 +17,7 @@ Given the JSON below...
 	   "length": {
 	        "min": 20,
 			"max": 60
-			}
+		}
 	},
 	"species": [
 		"there",
@@ -27,9 +27,9 @@ Given the JSON below...
 }
 ```
 
-##Examples
+## Examples
 
-###Decoding the JSON
+### Decoding the JSON
 
 ```
 Decoded = new JSONDecoder(jsondata);
@@ -37,7 +37,7 @@ Decoded = new JSONDecoder(jsondata);
 
 The above code would create a new JSON decoder based on the value of *jsondata*
 
-###Extracting a Single Point
+### Extracting a Single Point
 
 ```
 Console.WriteLine( Decoded["body"]["length"]["max"].Text );
@@ -45,7 +45,7 @@ Console.WriteLine( Decoded["body"]["length"]["max"].Text );
 
 The above code would output the maximum length of a centipede.
 
-###Extracting from an Array
+### Extracting from an Array
 
 ```
 foreach(JSONElement E in Dec["species"])
