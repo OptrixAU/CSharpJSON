@@ -27,19 +27,25 @@ Given the JSON below...
 }
 ```
 
-You'd first parse the JSON using
+##Examples
+
+###Decoding the JSON
 
 ```
 Decoded = new JSONDecoder(jsondata);
 ```
 
-Then you can get information using it as an array. 
+The above code would create a new JSON decoder based on the value of *jsondata*
+
+###Extracting a Single Point
 
 ```
 Console.WriteLine( Decoded["body"]["length"]["max"].Text );
 ```
 
-The Would get the maximum length of an adult centipede.
+The above code would output the maximum length of a centipede.
+
+###Extracting from an Array
 
 ```
 foreach(JSONElement E in Dec["species"])
@@ -48,4 +54,4 @@ foreach(JSONElement E in Dec["species"])
 }
 ```
 
-Would get each of the species of centipede - in this case, the values 'there', 'are' and 'many'.
+The above code would output the name of each species of centipede - in this case, the values 'there', 'are' and 'many'.
