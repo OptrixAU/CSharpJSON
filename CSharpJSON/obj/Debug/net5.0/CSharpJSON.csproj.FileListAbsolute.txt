@@ -1,0 +1,12 @@
+C:\OpenSource\CSJ\CSharpJSON\CSharpJSON\bin\Debug\net5.0\CSharpJSON.deps.json
+C:\OpenSource\CSJ\CSharpJSON\CSharpJSON\bin\Debug\net5.0\CSharpJSON.dll
+C:\OpenSource\CSJ\CSharpJSON\CSharpJSON\bin\Debug\net5.0\ref\CSharpJSON.dll
+C:\OpenSource\CSJ\CSharpJSON\CSharpJSON\bin\Debug\net5.0\CSharpJSON.pdb
+C:\OpenSource\CSJ\CSharpJSON\CSharpJSON\obj\Debug\net5.0\CSharpJSON.csproj.AssemblyReference.cache
+C:\OpenSource\CSJ\CSharpJSON\CSharpJSON\obj\Debug\net5.0\CSharpJSON.GeneratedMSBuildEditorConfig.editorconfig
+C:\OpenSource\CSJ\CSharpJSON\CSharpJSON\obj\Debug\net5.0\CSharpJSON.AssemblyInfoInputs.cache
+C:\OpenSource\CSJ\CSharpJSON\CSharpJSON\obj\Debug\net5.0\CSharpJSON.AssemblyInfo.cs
+C:\OpenSource\CSJ\CSharpJSON\CSharpJSON\obj\Debug\net5.0\CSharpJSON.csproj.CoreCompileInputs.cache
+C:\OpenSource\CSJ\CSharpJSON\CSharpJSON\obj\Debug\net5.0\CSharpJSON.dll
+C:\OpenSource\CSJ\CSharpJSON\CSharpJSON\obj\Debug\net5.0\ref\CSharpJSON.dll
+C:\OpenSource\CSJ\CSharpJSON\CSharpJSON\obj\Debug\net5.0\CSharpJSON.pdb
